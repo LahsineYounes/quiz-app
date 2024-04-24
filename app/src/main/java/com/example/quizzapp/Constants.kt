@@ -11,91 +11,81 @@ object Constants {
         val questionsList = ArrayList<Question>()
 
         val que1 = Question(
-            1, "What country does this flag belong to?",
-            R.drawable.flag_of_morocco,
-            "Albania", "China",
-            "Morocco", "Colombia", 3
+            QuestionNbr, "The_Question", drawable, 
+            "answer_1", "answer_2", "answer_3", "answer_4", 
+            nbrOfCorrectAnswer
         )
 
         questionsList.add(que1)
 
         val que2 = Question(
-            2, "What country does this flag belong to?",
-            R.drawable.flag_of_botsswana,
-            "Argentina", "Botswana",
-            "Nicaragua", "Honduras", 2
+            QuestionNbr, "The_Question", drawable, 
+            "answer_1", "answer_2", "answer_3", "answer_4", 
+            nbrOfCorrectAnswer
         )
 
         questionsList.add(que2)
 
         val que3 = Question(
-            3, "What country does this flag belong to?",
-            R.drawable.flag_of_costarica,
-            "Panama", "Thailand",
-            "Russia", "Costa Rica", 4
+            QuestionNbr, "The_Question", drawable, 
+            "answer_1", "answer_2", "answer_3", "answer_4", 
+            nbrOfCorrectAnswer
         )
 
         questionsList.add(que3)
 
         val que4 = Question(
-            4, "What country does this flag belong to?",
-            R.drawable.flag_of_djibouti,
-            "Djibouti", "Uzbekistan",
-            "Sierra Leone", "Gabon", 1
+            QuestionNbr, "The_Question", drawable, 
+            "answer_1", "answer_2", "answer_3", "answer_4", 
+            nbrOfCorrectAnswer
         )
 
         questionsList.add(que4)
 
         val que5 = Question(
-            5, "What country does this flag belong to?",
-            R.drawable.flag_of_estonia,
-            "Finland", "North Korea",
-            "Botswana", "Estonia", 4
+            QuestionNbr, "The_Question", drawable, 
+            "answer_1", "answer_2", "answer_3", "answer_4", 
+            nbrOfCorrectAnswer
         )
 
         questionsList.add(que5)
 
         val que6 = Question(
-            6, "What country does this flag belong to?",
-            R.drawable.flag_of_finland,
-            "Iceland", "Finland",
-            "Greece", "Estonia", 2
+            QuestionNbr, "The_Question", drawable, 
+            "answer_1", "answer_2", "answer_3", "answer_4", 
+            nbrOfCorrectAnswer
         )
 
         questionsList.add(que6)
 
         val que7 = Question(
-            7, "What country does this flag belong to?",
-            R.drawable.flag_of_greece,
-            "Finland", "Norway",
-            "Greece", "Uruguay", 3
+            QuestionNbr, "The_Question", drawable, 
+            "answer_1", "answer_2", "answer_3", "answer_4", 
+            nbrOfCorrectAnswer
         )
 
         questionsList.add(que7)
 
         val que8 = Question(
-            8, "What country does this flag belong to?",
-            R.drawable.flag_of_hongkong,
-            "Vietnam", "Hong Kong",
-            "China", "Tunisia", 2
+            QuestionNbr, "The_Question", drawable, 
+            "answer_1", "answer_2", "answer_3", "answer_4", 
+            nbrOfCorrectAnswer
         )
 
         questionsList.add(que8)
 
         val que9 = Question(
-            9, "What country does this flag belong to?",
-            R.drawable.flag_of_iran,
-            "Iran", "Tajikistan",
-            "Mexico", "Hungary", 1
+            QuestionNbr, "The_Question", drawable, 
+            "answer_1", "answer_2", "answer_3", "answer_4", 
+            nbrOfCorrectAnswer
         )
 
         questionsList.add(que9)
 
         val que10 = Question(
-            10, "What country does this flag belong to?",
-            R.drawable.flag_of_japan,
-            "Canada", "Singapore",
-            "Monaco", "Japan", 4
+            QuestionNbr, "The_Question", drawable, 
+            "answer_1", "answer_2", "answer_3", "answer_4", 
+            nbrOfCorrectAnswer
         )
 
         questionsList.add(que10)
