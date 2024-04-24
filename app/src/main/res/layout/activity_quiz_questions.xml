@@ -23,16 +23,14 @@
             android:layout_margin="10dp"
             android:gravity="center"
             android:textColor="#363A43"
-            android:textSize="22sp"
-            tools:text="What country does this flag \nbelong to?" />
+            android:textSize="22sp"/>
 
         <ImageView
             android:id="@+id/iv_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:contentDescription="image"
-            tools:src="@drawable/flag_of_armenia" />
+            android:contentDescription="image"/>
 
         <LinearLayout
             android:id="@+id/ll_progress_details"
@@ -60,8 +58,8 @@
                 android:gravity="center"
                 android:padding="15dp"
                 android:textColorHint="#7A8089"
-                android:textSize="14sp"
-                tools:text="0/10" />
+                android:textSize="14sp"/>
+            
         </LinearLayout>
 
         <TextView
@@ -73,8 +71,7 @@
             android:gravity="center"
             android:padding="15dp"
             android:textColor="#7A8089"
-            android:textSize="18sp"
-            tools:text="Apple" />
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/tv_option_two"
@@ -88,8 +85,7 @@
             android:gravity="center"
             android:padding="15dp"
             android:textColor="#7A8089"
-            android:textSize="18sp"
-            tools:text="Google" />
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/tv_option_three"
@@ -103,8 +99,7 @@
             android:gravity="center"
             android:padding="15dp"
             android:textColor="#7A8089"
-            android:textSize="18sp"
-            tools:text="Android Inc." />
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/tv_option_four"
@@ -118,8 +113,7 @@
             android:gravity="center"
             android:padding="15dp"
             android:textColor="#7A8089"
-            android:textSize="18sp"
-            tools:text="Nokia" />
+            android:textSize="18sp"/>
 
         <Button
             android:id="@+id/btn_submit"
