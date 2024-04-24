@@ -66,167 +66,58 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         tvOptionFour?.setOnClickListener(this)
 
         buttonSubmit?.setOnClickListener (this)
+        
     }
 
 
     private fun setQuestion() {
-
-        val question: Question =
-            mQuestionsList!![mCurrentPosition - 1]
+        /*
+        This method updates the UI with the current question's details. 
+        It checks if the user is on the last question to change the submit button text to "FINISH".
+        Question text and options, along with the question image, are set here.
+        */
+        val question: Question = mQuestionsList!![mCurrentPosition - 1]
         defaultOptionsView()
-
-        if (mCurrentPosition == mQuestionsList!!.size) {
-            buttonSubmit?.text = "FINISH"
-        } else {
-            buttonSubmit?.text = "SUBMIT"
-        }
-
-        progressBar?.progress =
-            mCurrentPosition
-        tvProgress?.text =
-            "$mCurrentPosition" + "/" + progressBar?.max
-
-        tvQuestion?.text = question.question
-        ivImage?.setImageResource(question.image)
-        tvOptionOne?.text = question.optionOne
-        tvOptionTwo?.text = question.optionTwo
-        tvOptionThree?.text = question.optionThree
-        tvOptionFour?.text = question.optionFour
+        
     }
 
     override fun onClick(view: View?) {
+        /*
+        This method is where you would handle click events for the option TextViews and the submit button.
+        (such as validating the selected answer, navigating to the next question, or finishing the quiz).
+        */
         when (view?.id) {
-
-            R.id.tv_option_one -> {
-                tvOptionOne?.let {
-                    selectedOptionView(it, 1)
-                }
-
-            }
-
-            R.id.tv_option_two -> {
-                tvOptionTwo?.let {
-                    selectedOptionView(it, 2)
-                }
-
-            }
-
-            R.id.tv_option_three -> {
-                tvOptionThree?.let {
-                    selectedOptionView(it, 3)
-                }
-
-            }
-
-            R.id.tv_option_four -> {
-                tvOptionFour?.let {
-                    selectedOptionView(it, 4)
-                }
-
-            }
-
-            R.id.btn_submit->{
-
-                if (mSelectedOptionPosition == 0) {
-
-                    mCurrentPosition++
-
-                    when {
-
-                        mCurrentPosition <= mQuestionsList!!.size -> {
-
-                            setQuestion()
-                        }
-                        else -> {
-                            //Toast.makeText(this@QuizQuestionsActivity, "You have successfully completed the quiz. Your Score is : $mCorrectAnswers", Toast.LENGTH_SHORT).show()
-
-                            val intent = Intent(this, ResultActivity::class.java)
-                            intent.putExtra(Constants.USER_Name, mUserName)
-                            intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
-                            intent.putExtra(Constants.TOTAL_QUESTIONS, mQuestionsList?.size)
-                            startActivity(intent)
-                            finish()
-                        }
-                    }
-                } else {
-                    val question = mQuestionsList?.get(mCurrentPosition - 1)
-
-
-                    if (question!!.correctAnswer != mSelectedOptionPosition) {
-                        answerView(mSelectedOptionPosition, R.drawable.wrong_option_border_bg)
-                    }
-
-                    else {
-                        mCorrectAnswers++
-                    }
-
-
-                    answerView(question.correctAnswer, R.drawable.correct_option_border_bg)
-
-                    if (mCurrentPosition == mQuestionsList!!.size) {
-                        buttonSubmit?.text = "FINISH"
-                    } else {
-                        buttonSubmit?.text = "GO TO NEXT QUESTION"
-                    }
-
-                    mSelectedOptionPosition = 0
-                }
-            }
+            R.id.tv_option_one -> {}
+            R.id.tv_option_two -> {}
+            R.id.tv_option_three -> {}
+            R.id.tv_option_four -> {}
+            R.id.btn_submit->{}
         }
     }
 
 
-
+    // `answerView` and `selectedOptionView` Methods would typically be used for updating the UI to reflect the selected option and the correct/incorrect status of an attempted question.
+    
     private fun answerView(answer: Int, drawableView: Int) {
-
         when (answer) {
-
-            1 -> {
-                tvOptionOne?.background = ContextCompat.getDrawable(
-                    this@QuizQuestionsActivity,
-                    drawableView
-                )
-            }
-            2 -> {
-                tvOptionTwo?.background = ContextCompat.getDrawable(
-                    this@QuizQuestionsActivity,
-                    drawableView
-                )
-            }
-            3 -> {
-                tvOptionThree?.background = ContextCompat.getDrawable(
-                    this@QuizQuestionsActivity,
-                    drawableView
-                )
-            }
-            4 -> {
-                tvOptionFour?.background = ContextCompat.getDrawable(
-                    this@QuizQuestionsActivity,
-                    drawableView
-                )
-            }
+            1 -> {}
+            2 -> {}
+            3 -> {}
+            4 -> {}
         }
     }
-
     private fun selectedOptionView(tv: TextView, selectedOptionNum: Int) {
-
         defaultOptionsView()
-
         mSelectedOptionPosition = selectedOptionNum
-
-        tv.setTextColor(
-            Color.parseColor("#363A43")
-        )
-        tv.setTypeface(tv.typeface, Typeface.BOLD)
-        tv.background = ContextCompat.getDrawable(
-            this@QuizQuestionsActivity,
-            R.drawable.selected_option_border_bg
-        )
+        tv.setTextColor()
+        tv.setTypeface()
+        tv.background = ContextCompat.getDrawable()
     }
 
 
     private fun defaultOptionsView() {
-
+        // This method is particularly useful when navigating to a new question, ensuring that all options are reset before the new question is displayed.
+        
         val options = ArrayList<TextView>()
         tvOptionOne?.let {
             options.add(0, it)
@@ -241,13 +132,6 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
             options.add(3,it)
         }
 
-        for (option in options) {
-            option.setTextColor(Color.parseColor("#404040"))
-            option.typeface = Typeface.DEFAULT
-            option.background = ContextCompat.getDrawable(
-                this@QuizQuestionsActivity,
-                R.drawable.default_option_border_bg
-            )
-        }
+        for (option in options) {}
     }
 }
